@@ -1,0 +1,5 @@
+# Taken from https://github.com/kubernetes/kubernetes/blob/091a5dc53b1b961f95de225ca4cddf33193051cd/build/root/.bazelrc
+
+# Show us information about failures.
+build --verbose_failures
+test --test_output=errors

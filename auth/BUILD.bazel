@@ -1,0 +1,23 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "handler.go",
+        "jwks.go",
+        "repository.go",
+        "repository_memory.go",
+        "type.go",
+    ],
+    importpath = "github.com/sawadashota/di-sample/auth",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//internal/admin:go_default_library",
+        "@com_github_dgrijalva_jwt_go//:go_default_library",
+        "@com_github_google_uuid//:go_default_library",
+        "@com_github_gorilla_mux//:go_default_library",
+        "@com_github_ory_herodot//:go_default_library",
+        "@com_github_pkg_errors//:go_default_library",
+        "@com_github_sirupsen_logrus//:go_default_library",
+    ],
+)

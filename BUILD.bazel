@@ -1,0 +1,8 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:exclude vendor
+gazelle(
+    name = "gazelle",
+    command = "fix",
+    prefix = "github.com/sawadashota/di-sample",
+)
